@@ -47,6 +47,9 @@ sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
 
 sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
+echo "--- You like to tinker, don't you master? ---"
+sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
+
 echo "--- Restarting Apache ---"
 sudo service apache2 restart
 
