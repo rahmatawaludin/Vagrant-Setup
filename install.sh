@@ -59,4 +59,4 @@ sudo mv composer.phar /usr/local/bin/composer
 
 # Laravel stuff here, if you want
 
-echo "--- All set to go! Would you like to play a game? ---"
+echo "--- All set to go! Go take a break and see what's on Laracasts today. ---"
