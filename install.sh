@@ -57,6 +57,9 @@ echo "--- Composer is the future. But you knew that, did you master? Nice job. -
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
+echo "--- Installing Redis ---"
+sudo apt-get install redis-server
+
 # Laravel stuff here, if you want
 
 echo "--- All set to go! Go take a break and see what's on Laracasts today. ---"

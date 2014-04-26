@@ -11,6 +11,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.network :forwarded_port, guest: 80, host: 8080
 
+    config.vm.network "private_network", ip: "192.168.50.4"
+
     config.vm.provision :shell, :path => "install.sh"
 
     # If true, then any SSH connections made will enable agent forwarding.
