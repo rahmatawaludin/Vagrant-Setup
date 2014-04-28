@@ -37,8 +37,8 @@ echo "--- Enabling mod-rewrite ---"
 sudo a2enmod rewrite
 
 echo "--- Setting document root ---"
-sudo rm -rf /var/www
-sudo ln -fs /vagrant/public /var/www
+sudo rm -rf /var/www/html
+sudo ln -fs /vagrant/public /var/www/html
 
 
 echo "--- What developer codes without errors turned on? Not you, master. ---"
@@ -59,6 +59,13 @@ sudo mv composer.phar /usr/local/bin/composer
 
 echo "--- Installing Redis ---"
 sudo apt-get install redis-server
+
+echo "--- Installing Varnish Cache ---"
+curl http://repo.varnish-cache.org/debian/GPG-key.txt | sudo apt-key add -
+echo "deb http://repo.varnish-cache.org/ubuntu/ precise varnish-4.0" | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+sudo apt-get -y install varnish
+
 
 # Laravel stuff here, if you want
 
